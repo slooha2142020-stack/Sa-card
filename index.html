@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقات تهنئة العيد</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>🎉 بطاقات تهنئة العيد 🎉</h1>
+      <p>اكتب اسمك واختر بطاقتك لتصنع بطاقة تهنئة خاصة بك</p>
+    </section>
+
+    <section class="card-box">
+      <label for="name">اكتب اسمك</label>
+      <input id="name" type="text" maxlength="40" placeholder="مثال: لارا خالد" autocomplete="name">
+
+      <h2>اختر بطاقة التهنئة</h2>
+      <div class="cards">
+        <button class="card-option selected" data-card="cards/card1.jpeg" aria-label="اختيار البطاقة الأولى">
+          <img src="cards/card1.jpeg" alt="بطاقة تهنئة عيد الفطر">
+        </button>
+      </div>
+
+      <button id="sendBtn" class="send">إرسال ✨</button>
+      <p id="error" class="error"></p>
+    </section>
+
+    <section id="result" class="result hidden">
+      <h2>بطاقتك جاهزة 🎊</h2>
+      <div class="preview">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="actions">
+        <button id="downloadBtn" class="download">تحميل البطاقة ⬇️</button>
+        <button id="backBtn" class="back">تعديل الاسم</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
